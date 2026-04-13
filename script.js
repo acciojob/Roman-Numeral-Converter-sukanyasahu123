@@ -1,26 +1,21 @@
 function convertToRoman(num) {
     const symbols = [
         ['M', 1000], 
-        ['D', 500], 
+		['CM',900],
+        ['D', 500],
+		['CD',400],
         ['C', 100], 
-        ['L', 50], 
-        ['X', 10], 
-        ['V', 5], 
+		['XC',90],
+        ['L', 50],
+		['XL',40],
+        ['X', 10],
+		['IX',9],
+        ['V', 5],
+		['IV',4],
         ['I', 1]
     ];
-
     let result = "";
-
-        const special = [
-        ['CM', 900],
-        ['CD', 400],
-        ['XC', 90],
-        ['XL', 40],
-        ['IX', 9],
-        ['IV', 4]
-    ];
-
-
+        ];
     for (let [sym, val] of special) {
         while (num >= val) {
             result += sym;
